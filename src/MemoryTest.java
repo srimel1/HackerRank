@@ -1,5 +1,6 @@
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -8,21 +9,25 @@ import java.util.Scanner;
 public class MemoryTest {
     public static void main(String[] args) throws FileNotFoundException {
         String str = "";
-        File file = new File("C:\\Users\\Stephanie\\Projects\\HackerRank\\src\\test");
+        FileReader file = new FileReader("C:\\Users\\Stephanie\\Projects\\HackerRank\\src\\test");
 
-        Scanner s = new Scanner(file).useDelimiter(" ");
+        Scanner s = new Scanner(file);
         List<String> list = new ArrayList<>();
 
         while (s.hasNext()) {
-            String data = s.next().trim().toLowerCase().replaceAll("\n", " ");
+            String data = s.next();
             data = data.replace("\n", "").replace("\r", " ");
             System.out.println(data);
             list.add(data);
 
         }
 
-
+        int[] alpha = new int[26];
         System.out.println(Arrays.toString(list.toArray()));
+
+        for (int i = 0; i < list.size(); i++) {
+
+        }
 //        System.out.println(list.get(0));
 
 

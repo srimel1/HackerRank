@@ -4,7 +4,7 @@ import java.util.List;
 
 class PalindromeSubStrings{
     public static int findPalindromesInSubString(String input, int j, int k) {
-        int count = input.length();
+        int count = 0;
         System.out.println("input length: "+input.length());
 
         for (; j >= 0 && k < input.length(); --j, ++k) {
@@ -40,7 +40,7 @@ class PalindromeSubStrings{
         int count = findAllPalindromeSubstrings(str);
         System.out.println("Total palindrome substrings: " + count);
         int count2 = findAllPalindromeSubstrings(s);
-        System.out.println("Total: "+count2);
+        System.out.println("Total: "+count2+" length: "+s.length());
 
     }
 }  

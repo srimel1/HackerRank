@@ -39,6 +39,14 @@ public class GotIt {
 
         }
         System.out.println(Arrays.toString(ls.toArray()));
+
+        String s3 = "asbsdfa";
+        String s4 = s3.replace("a","");
+        System.out.println("new: "+s4);
+        for (String c :
+                ls) {
+            System.out.println("C: "+c);
+        }
         String asdf = "asdf";
         char[] arr = asdf.toCharArray();
         for (int i = 0; i < ls.size(); i++) {
